@@ -1,17 +1,31 @@
-site_name = input( " Type the name of the site: ")
-site_1abr = input( " Type a abbreviation of the site: ")
-site_2abr = input( " Change the capitalization: ")
+import random
+import string
 
+chars = 'abcdefghijklmnopqrstuvwqyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*'
 
-verb = input(f" How do you use {site_name}? ")
-toot_verb = input(verb+", shorten your response to a word: ")
-ab_verb = input(toot_verb+", abbreviate the word: ")
-fnl_verb = input(ab_verb+", Change the capitalization: ")
+number = int(input('How many passwords? - '))
 
+length = int(input('How long do you want your passwords? - '))
 
-content = input(" One word to describe this site: ")
-ab_content = input( " Change the capitalization and abbreviate the word: ")
+while True:
+    try:
+        websites = str(input('Enter website names(NO SPACES!): '))
+        capss = str(input("Put some of your favorite CAPS and symbols(NO SPACES!): "))
+        final = str(input(f"{websites}{capss}"))
+    except:
+        print('ERROR')
+        continue
+    else:
+        break
 
+websites = ""
 
-print(f" You have finished!, here is  the finished password!! ")
-print(f" {site_2abr}{ab_content}{fnl_verb} ")                                
+for p in range(number):
+    final = ""
+    for c in range(length):
+        for w in range(0, len(websites)):
+            for a in range(capss):
+                    def final():
+                        final = final
+                        return ''.join(random.choice(final) for f in range(final))
+print(final)
